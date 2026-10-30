@@ -79,11 +79,26 @@ function App() {
     ],
     experiences = [
       {
-        title: "Issue Resolution Analyst (Application Support)",
-        company: "Athenahealth Technology Pvt Ltd, Chennai",
-        period: "May 2022 - Present",
+        title: "Senior Engineer, Tech Support",
+        company: "Norstella, Bengaluru, India",
+        period: "Apr 2026 - Present",
         description:
-          "Provided L2/L3 application and production support for SaaS applications, including on-call support for critical incidents. Managed high-volume tickets using JIRA and ServiceNow under ITSM processes while meeting SLA targets. Diagnosed application, database, and API issues using SQL queries, data validation, and log analysis. Authored 40+ Confluence knowledge articles, reducing inbound tickets by 12%.",
+          "Provide advanced product and application support for enterprise SaaS and healthcare technology platforms, resolving complex application, configuration and data-related incidents for global clients. Manage escalations and collaborate with Product, Development, QA and DevOps teams on root cause analysis, workarounds and long-term solutions. Perform system validation, data investigation and configuration review, and communicate issue status, resolutions and next actions throughout the support lifecycle. Create knowledge articles and troubleshooting guides, mentor team members and identify recurring issues to improve reliability and support processes.",
+        tags: [
+          "Product Support",
+          "Escalation Management",
+          "Root Cause Analysis",
+          "Healthcare SaaS",
+          "Knowledge Base",
+          "Team Mentoring",
+        ],
+      },
+      {
+        title: "Issue Resolution Analyst (Application Support)",
+        company: "Athenahealth Technology Pvt Ltd, Chennai, India",
+        period: "May 2022 - Apr 2026",
+        description:
+          "Delivered L2/L3 application and production support, including on-call coverage, while managing high-volume JIRA and ServiceNow queues under ITSM processes and SLA targets. Diagnosed application, database, data and API issues using SQL queries, data validation, REST API testing with Insomnia and log analysis. Performed incident, problem and change management; completed root cause analysis and documented corrective actions to reduce repeat incidents. Supported release activities and UAT, and authored 40+ Confluence knowledge articles that reduced inbound tickets by 12%.",
         tags: [
           "JIRA",
           "ServiceNow",
@@ -91,22 +106,23 @@ function App() {
           "REST APIs",
           "Insomnia",
           "Confluence",
+          "UAT",
         ],
       },
       {
         title: "Senior AR Associate (Technical Support)",
-        company: "Guidehouse India Pvt Ltd, Trivandrum",
+        company: "Guidehouse India Pvt Ltd, Trivandrum, India",
         period: "Dec 2021 - Apr 2022",
         description:
-          "Delivered application and production support via internal ticketing systems. Prioritized incidents and escalated issues based on severity and impact. Maintained 98% SLA compliance while supporting global customers.",
+          "Delivered application and production support through internal ticketing systems, prioritized and escalated incidents by severity, and maintained 98% SLA compliance for global customers.",
         tags: ["Application Support", "SLA Management", "Incident Escalation"],
       },
       {
         title: "Accounts Receivable Analyst (Support Analyst)",
-        company: "Quintessence Business Solutions, Chennai",
+        company: "Quintessence Business Solutions, Chennai, India",
         period: "Jun 2019 - Oct 2020",
         description:
-          "Supported customer operations through structured application support workflows. Performed SQL-based data validation and reporting. Collaborated with technical teams during change management initiatives, improving efficiency by 30%.",
+          "Performed SQL-based data validation and reporting and collaborated with technical teams on change initiatives, improving operational efficiency by 30%.",
         tags: ["SQL", "Data Validation", "Change Management", "Reporting"],
       },
     ],
@@ -255,7 +271,7 @@ function App() {
             <span className="text-slate-200 font-medium">
               Application Support Analyst
             </span>{" "}
-            with 5+ years of expertise in SaaS support, incident management, and
+            with 6+ years of expertise in SaaS support, incident management, and
             delivering reliable customer-focused solutions.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -320,7 +336,7 @@ function App() {
               <p className="text-lg text-slate-300 leading-relaxed">
                 Application Support Analyst / Technical Support Engineer with{" "}
                 <span className="text-sky-400 font-semibold">
-                  5+ years of experience
+                  6+ years of experience
                 </span>{" "}
                 supporting SaaS applications for global customers. Strong
                 expertise in application and production support, incident,
@@ -341,7 +357,7 @@ function App() {
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div className="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50">
                   <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
-                    5+
+                    6+
                   </div>
                   <div className="text-sm text-slate-400 mt-1">
                     Years Experience
