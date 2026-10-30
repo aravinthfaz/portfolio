@@ -1,0 +1,104 @@
+{
+  "siteTitle": "Aravinth R | Senior Technical Support Engineer",
+  "name": "Aravinth R",
+  "initials": "AR",
+  "availability": "Available for opportunities",
+  "heroSummary": "A **Senior Technical Support Engineer** and Product Support Analyst with 6+ years of experience supporting enterprise SaaS and healthcare technology applications for global customers.",
+  "about": {
+    "paragraphs": [
+      "Senior Technical Support Engineer with **6+ years of experience** supporting enterprise SaaS and healthcare technology applications for global customers.",
+      "Skilled in L2/L3 application and production support, ticket queue and SLA management, incident, problem and change management, root cause analysis, client communication, SQL-based data validation, REST API troubleshooting and log analysis.",
+      "Experienced in collaborating with Product, Development, QA and DevOps teams to resolve critical production issues, support UAT and releases, document repeatable processes and mentor support teams."
+    ],
+    "stats": [
+      { "value": "6+", "label": "Years Experience" },
+      { "value": "40+", "label": "KB Articles Written" },
+      { "value": "98%", "label": "SLA Compliance" },
+      { "value": "12%", "label": "Ticket Reduction" }
+    ]
+  },
+  "experiences": [
+    {
+      "title": "Senior Engineer, Tech Support",
+      "company": "Norstella, Bengaluru, India",
+      "period": "Apr 2026 - Present",
+      "description": "Provide advanced product and application support for enterprise SaaS and healthcare technology platforms, resolving complex application, configuration and data-related incidents for global clients. Manage escalations and collaborate with Product, Development, QA and DevOps teams on root cause analysis, workarounds and long-term solutions. Perform system validation, data investigation and configuration review, and communicate issue status, resolutions and next actions throughout the support lifecycle. Create knowledge articles and troubleshooting guides, mentor team members and identify recurring issues to improve reliability and support processes.",
+      "tags": ["Product Support", "Escalation Management", "Root Cause Analysis", "Healthcare SaaS", "Knowledge Base", "Team Mentoring"]
+    },
+    {
+      "title": "Issue Resolution Analyst (Application Support)",
+      "company": "Athenahealth Technology Pvt Ltd, Chennai, India",
+      "period": "May 2022 - Apr 2026",
+      "description": "Delivered L2/L3 application and production support, including on-call coverage, while managing high-volume JIRA and ServiceNow queues under ITSM processes and SLA targets. Diagnosed application, database, data and API issues using SQL queries, data validation, REST API testing with Insomnia and log analysis. Performed incident, problem and change management; completed root cause analysis and documented corrective actions to reduce repeat incidents. Supported release activities and UAT, and authored 40+ Confluence knowledge articles that reduced inbound tickets by 12%.",
+      "tags": ["JIRA", "ServiceNow", "SQL", "REST APIs", "Insomnia", "Confluence", "UAT"]
+    },
+    {
+      "title": "Senior AR Associate (Technical Support)",
+      "company": "Guidehouse India Pvt Ltd, Trivandrum, India",
+      "period": "Dec 2021 - Apr 2022",
+      "description": "Delivered application and production support through internal ticketing systems, prioritized and escalated incidents by severity, and maintained 98% SLA compliance for global customers.",
+      "tags": ["Application Support", "SLA Management", "Incident Escalation"]
+    },
+    {
+      "title": "Accounts Receivable Analyst (Support Analyst)",
+      "company": "Quintessence Business Solutions, Chennai, India",
+      "period": "Jun 2019 - Oct 2020",
+      "description": "Performed SQL-based data validation and reporting and collaborated with technical teams on change initiatives, improving operational efficiency by 30%.",
+      "tags": ["SQL", "Data Validation", "Change Management", "Reporting"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Computer Science",
+      "school": "Thiagarajar College of Arts and Science, Madurai",
+      "period": "2014 - 2017",
+      "description": "Completed Bachelor's degree in Computer Science with a strong foundation in software engineering principles and distributed systems."
+    }
+  ],
+  "skillCategories": [
+    {
+      "category": "Support & Operations",
+      "icon": "Headset",
+      "items": ["Product Support", "Application Support", "Production Support", "L2/L3 Support", "On-call Support", "Ticket Queue Management", "SLA Monitoring", "Incident Management", "Problem Management", "Change Management", "Escalation Management", "Root Cause Analysis"]
+    },
+    {
+      "category": "Tools & Platforms",
+      "icon": "Shield",
+      "items": ["ServiceNow", "JIRA", "Zendesk", "Confluence", "Salesforce CRM", "Insomnia", "Azure", "ITSM Frameworks"]
+    },
+    {
+      "category": "Technical",
+      "icon": "Database",
+      "items": ["SQL Queries", "Data Validation", "REST APIs", "API Troubleshooting", "Log Analysis", "SaaS Applications", "UAT", "Release Support", "Basic C#", ".NET"]
+    },
+    {
+      "category": "Client & Knowledge",
+      "icon": "FileText",
+      "items": ["Global Client Support", "Stakeholder Communication", "Ticket Documentation", "Knowledge Base Management", "SOPs", "Cross-functional Collaboration", "Team Mentoring"]
+    }
+  ],
+  "highlights": [
+    {
+      "title": "Knowledge Base Champion",
+      "description": "Authored 40+ Confluence knowledge articles, reducing inbound tickets by 12% and improving team self-service resolution rates.",
+      "icon": "FileText"
+    },
+    {
+      "title": "98% SLA Compliance",
+      "description": "Maintained exceptional SLA compliance while supporting global SaaS customers across multiple time zones and priorities.",
+      "icon": "Shield"
+    },
+    {
+      "title": "Efficiency Optimizer",
+      "description": "Collaborated with technical teams during change management initiatives, improving operational efficiency by 30%.",
+      "icon": "Award"
+    }
+  ],
+  "contact": {
+    "intro": "I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology. Feel free to reach out!",
+    "email": "aravinthfaz@gmail.com",
+    "phone": "+91 9750805464",
+    "location": "Chennai, India",
+    "linkedin": "https://linkedin.com/in/aravinth-r-73601a130"
+  }
+}
