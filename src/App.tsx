@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import "./App.css";
 import { getIcon, highlight, useSiteContent } from "./content";
+import ThemePicker from "./ThemePicker";
 
 function App() {
   const content = useSiteContent();
@@ -549,6 +550,7 @@ function App() {
           </div>
         </div>
       </footer>
+      <ThemePicker />
     </div>
   );
 }
