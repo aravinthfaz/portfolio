@@ -4,23 +4,25 @@ import {
   Briefcase,
   ChevronDown,
   Code,
-  Database,
-  FileText,
   GraduationCap,
-  Headset,
   Linkedin,
   Mail,
   MapPin,
   Menu,
   Phone,
   Send,
-  Shield,
   User,
   X,
 } from "lucide-react";
 import "./App.css";
+import { getIcon, highlight, useSiteContent } from "./content";
 
 function App() {
+  const content = useSiteContent();
+  const { experiences, skillCategories, highlights, contact } = content;
+  useEffect(() => {
+    document.title = content.siteTitle;
+  }, [content.siteTitle]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
     [activeSection, setActiveSection] = useState("home"),
     [scrolled, setScrolled] = useState(false);
@@ -76,138 +78,6 @@ function App() {
         id: "contact",
         label: "Contact",
       },
-    ],
-    experiences = [
-      {
-        title: "Senior Engineer, Tech Support",
-        company: "Norstella, Bengaluru, India",
-        period: "Apr 2026 - Present",
-        description:
-          "Provide advanced product and application support for enterprise SaaS and healthcare technology platforms, resolving complex application, configuration and data-related incidents for global clients. Manage escalations and collaborate with Product, Development, QA and DevOps teams on root cause analysis, workarounds and long-term solutions. Perform system validation, data investigation and configuration review, and communicate issue status, resolutions and next actions throughout the support lifecycle. Create knowledge articles and troubleshooting guides, mentor team members and identify recurring issues to improve reliability and support processes.",
-        tags: [
-          "Product Support",
-          "Escalation Management",
-          "Root Cause Analysis",
-          "Healthcare SaaS",
-          "Knowledge Base",
-          "Team Mentoring",
-        ],
-      },
-      {
-        title: "Issue Resolution Analyst (Application Support)",
-        company: "Athenahealth Technology Pvt Ltd, Chennai, India",
-        period: "May 2022 - Apr 2026",
-        description:
-          "Delivered L2/L3 application and production support, including on-call coverage, while managing high-volume JIRA and ServiceNow queues under ITSM processes and SLA targets. Diagnosed application, database, data and API issues using SQL queries, data validation, REST API testing with Insomnia and log analysis. Performed incident, problem and change management; completed root cause analysis and documented corrective actions to reduce repeat incidents. Supported release activities and UAT, and authored 40+ Confluence knowledge articles that reduced inbound tickets by 12%.",
-        tags: [
-          "JIRA",
-          "ServiceNow",
-          "SQL",
-          "REST APIs",
-          "Insomnia",
-          "Confluence",
-          "UAT",
-        ],
-      },
-      {
-        title: "Senior AR Associate (Technical Support)",
-        company: "Guidehouse India Pvt Ltd, Trivandrum, India",
-        period: "Dec 2021 - Apr 2022",
-        description:
-          "Delivered application and production support through internal ticketing systems, prioritized and escalated incidents by severity, and maintained 98% SLA compliance for global customers.",
-        tags: ["Application Support", "SLA Management", "Incident Escalation"],
-      },
-      {
-        title: "Accounts Receivable Analyst (Support Analyst)",
-        company: "Quintessence Business Solutions, Chennai, India",
-        period: "Jun 2019 - Oct 2020",
-        description:
-          "Performed SQL-based data validation and reporting and collaborated with technical teams on change initiatives, improving operational efficiency by 30%.",
-        tags: ["SQL", "Data Validation", "Change Management", "Reporting"],
-      },
-    ],
-    skillCategories = [
-      {
-        category: "Support & Operations",
-        items: [
-          "Product Support",
-          "Application Support",
-          "Production Support",
-          "L2/L3 Support",
-          "On-call Support",
-          "Ticket Queue Management",
-          "SLA Monitoring",
-          "Incident Management",
-          "Problem Management",
-          "Change Management",
-          "Escalation Management",
-          "Root Cause Analysis",
-        ],
-        icon: Headset,
-      },
-      {
-        category: "Tools & Platforms",
-        items: [
-          "ServiceNow",
-          "JIRA",
-          "Zendesk",
-          "Confluence",
-          "Salesforce CRM",
-          "Insomnia",
-          "Azure",
-          "ITSM Frameworks",
-        ],
-        icon: Shield,
-      },
-      {
-        category: "Technical",
-        items: [
-          "SQL Queries",
-          "Data Validation",
-          "REST APIs",
-          "API Troubleshooting",
-          "Log Analysis",
-          "SaaS Applications",
-          "UAT",
-          "Release Support",
-          "Basic C#",
-          ".NET",
-        ],
-        icon: Database,
-      },
-      {
-        category: "Client & Knowledge",
-        items: [
-          "Global Client Support",
-          "Stakeholder Communication",
-          "Ticket Documentation",
-          "Knowledge Base Management",
-          "SOPs",
-          "Cross-functional Collaboration",
-          "Team Mentoring",
-        ],
-        icon: FileText,
-      },
-    ],
-    highlights = [
-      {
-        title: "Knowledge Base Champion",
-        description:
-          "Authored 40+ Confluence knowledge articles, reducing inbound tickets by 12% and improving team self-service resolution rates.",
-        icon: FileText,
-      },
-      {
-        title: "98% SLA Compliance",
-        description:
-          "Maintained exceptional SLA compliance while supporting global SaaS customers across multiple time zones and priorities.",
-        icon: Shield,
-      },
-      {
-        title: "Efficiency Optimizer",
-        description:
-          "Collaborated with technical teams during change management initiatives, improving operational efficiency by 30%.",
-        icon: Award,
-      },
     ];
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
@@ -220,7 +90,7 @@ function App() {
               onClick={() => scrollToSection("home")}
               className="text-xl font-bold bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent hover:from-sky-300 hover:to-violet-300 transition-all"
             >
-              AR
+              {content.initials}
             </button>
             <div className="hidden md:flex items-center gap-1">
               {navItems.map((z) => (
@@ -274,23 +144,17 @@ function App() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <div className="mb-6">
             <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-sky-500/10 text-sky-400 border border-sky-500/20">
-              Available for opportunities
+              {content.availability}
             </span>
           </div>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             Hi, I'm{" "}
             <span className="bg-gradient-to-r from-sky-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
-              Aravinth R
+              {content.name}
             </span>
           </h1>
           <p className="text-xl sm:text-2xl text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-            A{" "}
-            <span className="text-slate-200 font-medium">
-              Senior Technical Support Engineer
-            </span>{" "}
-            and Product Support Analyst with 6+ years of experience supporting
-            enterprise SaaS and healthcare technology applications for global
-            customers.
+            {highlight(content.heroSummary, "text-slate-200 font-medium")}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
@@ -308,7 +172,7 @@ function App() {
           </div>
           <div className="flex items-center justify-center gap-6 mt-12">
             <a
-              href="https://linkedin.com/in/aravinth-r-73601a130"
+              href={contact.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-500 hover:text-sky-400 transition-colors duration-200"
@@ -316,7 +180,7 @@ function App() {
               <Linkedin size={22} />
             </a>
             <a
-              href="mailto:aravinthfaz@gmail.com"
+              href={`mailto:${contact.email}`}
               className="text-slate-500 hover:text-sky-400 transition-colors duration-200"
             >
               <Mail size={22} />
@@ -351,59 +215,32 @@ function App() {
               />
             </div>
             <div className="space-y-6">
-              <p className="text-lg text-slate-300 leading-relaxed">
-                Senior Technical Support Engineer with{" "}
-                <span className="text-sky-400 font-semibold">
-                  6+ years of experience
-                </span>{" "}
-                supporting enterprise SaaS and healthcare technology
-                applications for global customers.
-              </p>
-              <p className="text-slate-400 leading-relaxed">
-                Skilled in L2/L3 application and production support, ticket
-                queue and SLA management, incident, problem and change
-                management, root cause analysis, client communication, SQL-based
-                data validation, REST API troubleshooting and log analysis.
-              </p>
-              <p className="text-slate-400 leading-relaxed">
-                Experienced in collaborating with Product, Development, QA and
-                DevOps teams to resolve critical production issues, support UAT
-                and releases, document repeatable processes and mentor support
-                teams.
-              </p>
+              {content.about.paragraphs.map((text, i) => (
+                <p
+                  key={i}
+                  className={
+                    i === 0
+                      ? "text-lg text-slate-300 leading-relaxed"
+                      : "text-slate-400 leading-relaxed"
+                  }
+                >
+                  {highlight(text, "text-sky-400 font-semibold")}
+                </p>
+              ))}
               <div className="grid grid-cols-2 gap-6 pt-4">
-                <div className="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
-                    6+
+                {content.about.stats.map((stat, i) => (
+                  <div
+                    key={i}
+                    className="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50"
+                  >
+                    <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm text-slate-400 mt-1">
+                      {stat.label}
+                    </div>
                   </div>
-                  <div className="text-sm text-slate-400 mt-1">
-                    Years Experience
-                  </div>
-                </div>
-                <div className="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
-                    40+
-                  </div>
-                  <div className="text-sm text-slate-400 mt-1">
-                    KB Articles Written
-                  </div>
-                </div>
-                <div className="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
-                    98%
-                  </div>
-                  <div className="text-sm text-slate-400 mt-1">
-                    SLA Compliance
-                  </div>
-                </div>
-                <div className="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
-                    12%
-                  </div>
-                  <div className="text-sm text-slate-400 mt-1">
-                    Ticket Reduction
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -456,25 +293,30 @@ function App() {
               <GraduationCap className="text-violet-400" size={28} />
               <h3 className="text-2xl sm:text-3xl font-bold">Education</h3>
             </div>
-            <div className="p-6 sm:p-8 rounded-2xl bg-slate-800/30 border border-slate-700/50">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                <div>
-                  <h4 className="text-xl font-bold text-slate-100">
-                    Bachelor of Computer Science
-                  </h4>
-                  <p className="text-violet-400 font-medium">
-                    Thiagarajar College of Arts and Science, Madurai
+            <div className="space-y-6">
+              {content.education.map((edu, i) => (
+                <div
+                  key={i}
+                  className="p-6 sm:p-8 rounded-2xl bg-slate-800/30 border border-slate-700/50"
+                >
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                    <div>
+                      <h4 className="text-xl font-bold text-slate-100">
+                        {edu.degree}
+                      </h4>
+                      <p className="text-violet-400 font-medium">
+                        {edu.school}
+                      </p>
+                    </div>
+                    <span className="text-sm text-slate-500 mt-1 sm:mt-0 px-3 py-1 rounded-full bg-slate-800 border border-slate-700">
+                      {edu.period}
+                    </span>
+                  </div>
+                  <p className="text-slate-400 leading-relaxed">
+                    {edu.description}
                   </p>
                 </div>
-                <span className="text-sm text-slate-500 mt-1 sm:mt-0 px-3 py-1 rounded-full bg-slate-800 border border-slate-700">
-                  2014 - 2017
-                </span>
-              </div>
-              <p className="text-slate-400 leading-relaxed">
-                Completed Bachelor's degree in Computer Science with a strong
-                foundation in software engineering principles and distributed
-                systems.
-              </p>
+              ))}
             </div>
           </div>
         </div>
@@ -490,7 +332,7 @@ function App() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {skillCategories.map((z, I) => {
-              const Icon = z.icon;
+              const Icon = getIcon(z.icon);
               return (
                 <div
                   key={I}
@@ -524,7 +366,7 @@ function App() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {highlights.map((z, I) => {
-              const Icon = z.icon;
+              const Icon = getIcon(z.icon);
               return (
                 <div
                   key={I}
@@ -555,13 +397,11 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <p className="text-lg text-slate-300 leading-relaxed">
-                I'm always open to discussing new opportunities, interesting
-                projects, or just having a chat about technology. Feel free to
-                reach out!
+                {contact.intro}
               </p>
               <div className="space-y-4">
                 <a
-                  href="mailto:aravinthfaz@gmail.com"
+                  href={`mailto:${contact.email}`}
                   className="flex items-center gap-4 p-4 rounded-xl bg-slate-800/30 border border-slate-700/50 hover:border-sky-500/30 hover:bg-slate-800/50 transition-all duration-300 group"
                 >
                   <div className="p-3 rounded-lg bg-sky-500/10 text-sky-400 group-hover:bg-sky-500/20 transition-colors">
@@ -569,7 +409,7 @@ function App() {
                   </div>
                   <div>
                     <div className="text-sm text-slate-500">Email</div>
-                    <div className="text-slate-200">aravinthfaz@gmail.com</div>
+                    <div className="text-slate-200">{contact.email}</div>
                   </div>
                 </a>
                 <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-800/30 border border-slate-700/50">
@@ -578,7 +418,7 @@ function App() {
                   </div>
                   <div>
                     <div className="text-sm text-slate-500">Phone</div>
-                    <div className="text-slate-200">+91 9750805464</div>
+                    <div className="text-slate-200">{contact.phone}</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 p-4 rounded-xl bg-slate-800/30 border border-slate-700/50">
@@ -587,13 +427,13 @@ function App() {
                   </div>
                   <div>
                     <div className="text-sm text-slate-500">Location</div>
-                    <div className="text-slate-200">Chennai, India</div>
+                    <div className="text-slate-200">{contact.location}</div>
                   </div>
                 </div>
               </div>
               <div className="flex items-center gap-4 pt-4">
                 <a
-                  href="https://linkedin.com/in/aravinth-r-73601a130"
+                  href={contact.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-slate-400 hover:text-sky-400 hover:border-sky-500/30 transition-all duration-200"
@@ -603,7 +443,7 @@ function App() {
               </div>
             </div>
             <form
-              action="https://formsubmit.co/aravinthfaz@gmail.com"
+              action={`https://formsubmit.co/${contact.email}`}
               method="POST"
               className="space-y-5"
             >
@@ -616,7 +456,7 @@ function App() {
               <input
                 type="hidden"
                 name="_next"
-                value="https://resume-portfolio-website-40y4uk8f.devinapps.com"
+                value={window.location.href.split("#")[0]}
               />
               <input
                 type="text"
@@ -688,11 +528,11 @@ function App() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-slate-500">
-              © {new Date().getFullYear()} Aravinth R. All rights reserved.
+              © {new Date().getFullYear()} {content.name}. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
               <a
-                href="https://linkedin.com/in/aravinth-r-73601a130"
+                href={contact.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-500 hover:text-sky-400 transition-colors"
@@ -700,7 +540,7 @@ function App() {
                 <Linkedin size={18} />
               </a>
               <a
-                href="mailto:aravinthfaz@gmail.com"
+                href={`mailto:${contact.email}`}
                 className="text-slate-500 hover:text-sky-400 transition-colors"
               >
                 <Mail size={18} />
