@@ -341,7 +341,7 @@ function App() {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-sky-500 to-violet-500 rounded-2xl opacity-20 group-hover:opacity-30 blur transition-opacity duration-300" />
               <img
-                src="/images/about.jpg"
+                src={`${import.meta.env.BASE_URL}images/about.jpg`}
                 alt="Developer working on a laptop at a modern workspace"
                 className="relative rounded-2xl w-full h-96 object-cover"
                 onError={(z) => {
