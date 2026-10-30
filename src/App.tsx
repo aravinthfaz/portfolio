@@ -130,35 +130,20 @@ function App() {
       {
         category: "Support & Operations",
         items: [
+          "Product Support",
           "Application Support",
           "Production Support",
           "L2/L3 Support",
           "On-call Support",
-          "Root Cause Analysis",
-        ],
-        icon: Headset,
-      },
-      {
-        category: "ITSM & Processes",
-        items: [
+          "Ticket Queue Management",
+          "SLA Monitoring",
           "Incident Management",
           "Problem Management",
           "Change Management",
-          "SLA Monitoring",
-          "ITSM Frameworks",
+          "Escalation Management",
+          "Root Cause Analysis",
         ],
-        icon: Shield,
-      },
-      {
-        category: "Technical Skills",
-        items: [
-          "SQL Queries",
-          "API Troubleshooting",
-          "REST APIs",
-          "Log Analysis",
-          "Data Validation",
-        ],
-        icon: Database,
+        icon: Headset,
       },
       {
         category: "Tools & Platforms",
@@ -168,6 +153,38 @@ function App() {
           "Zendesk",
           "Confluence",
           "Salesforce CRM",
+          "Insomnia",
+          "Azure",
+          "ITSM Frameworks",
+        ],
+        icon: Shield,
+      },
+      {
+        category: "Technical",
+        items: [
+          "SQL Queries",
+          "Data Validation",
+          "REST APIs",
+          "API Troubleshooting",
+          "Log Analysis",
+          "SaaS Applications",
+          "UAT",
+          "Release Support",
+          "Basic C#",
+          ".NET",
+        ],
+        icon: Database,
+      },
+      {
+        category: "Client & Knowledge",
+        items: [
+          "Global Client Support",
+          "Stakeholder Communication",
+          "Ticket Documentation",
+          "Knowledge Base Management",
+          "SOPs",
+          "Cross-functional Collaboration",
+          "Team Mentoring",
         ],
         icon: FileText,
       },
@@ -267,12 +284,13 @@ function App() {
             </span>
           </h1>
           <p className="text-xl sm:text-2xl text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-            An experienced{" "}
+            A{" "}
             <span className="text-slate-200 font-medium">
-              Application Support Analyst
+              Senior Technical Support Engineer
             </span>{" "}
-            with 6+ years of expertise in SaaS support, incident management, and
-            delivering reliable customer-focused solutions.
+            and Product Support Analyst with 6+ years of experience supporting
+            enterprise SaaS and healthcare technology applications for global
+            customers.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
@@ -334,25 +352,24 @@ function App() {
             </div>
             <div className="space-y-6">
               <p className="text-lg text-slate-300 leading-relaxed">
-                Application Support Analyst / Technical Support Engineer with{" "}
+                Senior Technical Support Engineer with{" "}
                 <span className="text-sky-400 font-semibold">
                   6+ years of experience
                 </span>{" "}
-                supporting SaaS applications for global customers. Strong
-                expertise in application and production support, incident,
-                problem, and change management.
+                supporting enterprise SaaS and healthcare technology
+                applications for global customers.
               </p>
               <p className="text-slate-400 leading-relaxed">
-                Proven ability to perform SQL queries, data validation, API
-                troubleshooting, REST API testing, log analysis, and root cause
-                analysis while collaborating with engineering and product teams
-                to resolve production issues.
+                Skilled in L2/L3 application and production support, ticket
+                queue and SLA management, incident, problem and change
+                management, root cause analysis, client communication, SQL-based
+                data validation, REST API troubleshooting and log analysis.
               </p>
               <p className="text-slate-400 leading-relaxed">
-                Experienced with ITSM processes and SLA management using JIRA
-                and ServiceNow. Strong communication and technical documentation
-                skills. Flexible with shifts, on-call rotations, and open to
-                relocation.
+                Experienced in collaborating with Product, Development, QA and
+                DevOps teams to resolve critical production issues, support UAT
+                and releases, document repeatable processes and mentor support
+                teams.
               </p>
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div className="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50">
@@ -496,29 +513,6 @@ function App() {
                 </div>
               );
             })}
-          </div>
-          <div className="mt-12">
-            <div className="flex items-center gap-3 mb-6">
-              <Award className="text-violet-400" size={24} />
-              <h3 className="text-xl font-bold">Additional Skills</h3>
-            </div>
-            <div className="grid sm:grid-cols-3 gap-4">
-              {[
-                "Release Support & UAT",
-                "SaaS Applications",
-                "Basic C# / .NET / Azure",
-              ].map((z, I) => (
-                <div
-                  key={I}
-                  className="flex items-center gap-3 p-4 rounded-xl bg-slate-800/30 border border-slate-700/50"
-                >
-                  <Award className="text-violet-400 shrink-0" size={20} />
-                  <span className="text-slate-300 text-sm font-medium">
-                    {z}
-                  </span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
