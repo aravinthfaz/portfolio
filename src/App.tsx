@@ -154,7 +154,7 @@ function App() {
               {content.name}
             </span>
           </h1>
-          <p className="text-xl sm:text-2xl text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="whitespace-pre-line text-xl sm:text-2xl text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
             {highlight(content.heroSummary, "text-slate-200 font-medium")}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -272,7 +272,7 @@ function App() {
                       {z.period}
                     </span>
                   </div>
-                  <p className="text-slate-400 mb-4 leading-relaxed">
+                  <p className="whitespace-pre-line text-slate-400 mb-4 leading-relaxed">
                     {z.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -313,7 +313,7 @@ function App() {
                       {edu.period}
                     </span>
                   </div>
-                  <p className="text-slate-400 leading-relaxed">
+                  <p className="whitespace-pre-line text-slate-400 leading-relaxed">
                     {edu.description}
                   </p>
                 </div>
@@ -379,7 +379,7 @@ function App() {
                   <h3 className="text-xl font-bold text-slate-100 mb-3">
                     {z.title}
                   </h3>
-                  <p className="text-slate-400 leading-relaxed">
+                  <p className="whitespace-pre-line text-slate-400 leading-relaxed">
                     {z.description}
                   </p>
                 </div>
@@ -397,7 +397,7 @@ function App() {
           </div>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
-              <p className="text-lg text-slate-300 leading-relaxed">
+              <p className="whitespace-pre-line text-lg text-slate-300 leading-relaxed">
                 {contact.intro}
               </p>
               <div className="space-y-4">
